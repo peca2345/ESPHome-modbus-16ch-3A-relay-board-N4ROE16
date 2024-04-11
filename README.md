@@ -200,3 +200,53 @@ switch:
     bitmask: 1
 ```
 
+## Change modbus address:
+- To change the address, add the following "on_boot" section
+- Edit the current and target device addresses in hex (decimal should also work)
+- After uploading the program to the ESP, disconnect the power for 5s and turn it back on
+- Now comment out / remove the "on_boot" config from the program and change the address of the modbus_controller to the new address you chose in the "on_boot" config
+- Perform the program update again and the device should now work with the new address
+```
+esphome:
+  name: a4s-N4ROE16
+  friendly_name: a4s-N4ROE16
+## ON BOOT - CHANGE MODBUS ADDRESS "1" to "71"
+on_boot:
+  priority: -100
+  then:
+    - lambda: |-
+        auto new_address = 0x47;  // New address is 0x47 (71 in decimal)
+
+        if(new_address < 0x01 || new_address > 0xF7) { // Check address range
+          ESP_LOGE("ModbusLambda", "Address needs to be between 0x01 and 0xF7");
+          return;
+        }
+
+        esphome::modbus_controller::ModbusController *controller = id(relay_board);
+        auto set_addr_cmd = esphome::modbus_controller::ModbusCommandItem::create_write_single_command(
+          controller, 0x00FD, new_address);  // Command to change address
+
+        delay(200);  // Short pause before sending command
+        controller->queue_command(set_addr_cmd);
+        ESP_LOGI("ModbusLambda", "Meter Addr set to 0x47");
+        
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+logger:
+
+api:
+  encryption:
+    key: "R86/CjUd0rIfghfxghfsgjsfjsfdgjsfgj415lu/y97FMHCt3F0="
+
+ota:
+  password: "4h56r454j56fgd4j5fg6j4fg56dj1fgdj"
+
+wifi: 
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+captive_portal:
+```
