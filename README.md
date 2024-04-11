@@ -7,7 +7,7 @@
 ![Board](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/main/DATA/16ch_board.png?raw=true)
 
 ## Info:
-- 16ch relay board
+- 1/2/48/16/32 relay version
 - RS485 Modbus RTU
 - working voltage 12V or 24V version
 - max. current 3A/250VAC 3A/30VDC
