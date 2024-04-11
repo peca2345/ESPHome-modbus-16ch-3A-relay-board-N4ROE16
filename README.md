@@ -13,9 +13,9 @@ This guide describes how to communicate with ESP MCU using ESPHome for integrati
 - the device does not have a DIP switch for changing the address (only software change of address through PC or ESPHome)
   
 ## Components:
-- 16CH RS485 Relay Board N4ROE16: [ALI](https://www.aliexpress.us/item/3256805729272932.html?spm=a2g0o.order_list.order_list_main.39.2b4f1802Mfl4l0&gatewayAdapt=glo2usa4itemAdapt#nav-specification) / [ELETECH](https://485io.com/rs485-relays-c-2_3_19/n4roe16-mini-dc-24v-16ch-multifunction-modbus-rtu-rs485-relay-board-2a-02w-low-power-consumption-micro-voice-relay-module-n4rof32-p-1015.html) 
-- Kincony A4S / A8S / E16S or any ESP with RS485/TTL converter [ALI Kincony A2](https://www.aliexpress.com/item/1005005385355462.html?spm=a2g0o.productlist.main.11.5576hdzNhdzNcU&algo_pvid=3749b2c9-6c7a-4d9c-b7b3-beb28819dd9f&algo_exp_id=3749b2c9-6c7a-4d9c-b7b3-beb28819dd9f-5&pdp_npi=4%40dis%21USD%2153.62%2153.62%21%21%2153.62%2153.62%21%40210388c917128644863171882ea720%2112000032837637725%21sea%21CZ%21166466096%21&curPageLogUid=5cCpVpBKg0a9&utparam-url=scene%3Asearch%7Cquery_from%3A)
-- RS485/TTL converter (better) [ALI](https://www.aliexpress.com/item/4001183401209.html?fbclid=IwAR26adPvbd5XSLpuhDKlmJ9YXi_KyOS-wdXoYRxBGDR4IJyzURRGOYdQwMk) (without flow pin!)  
+- 16CH RS485 Relay Board N4ROE16: [ALI](https://www.aliexpress.us/item/3256805729272932.html) / [ELETECH](https://485io.com/rs485-relays-c-2_3_19/n4roe16-mini-dc-24v-16ch-multifunction-modbus-rtu-rs485-relay-board-2a-02w-low-power-consumption-micro-voice-relay-module-n4rof32-p-1015.html) 
+- Kincony A4S / A8S / E16S or any ESP with RS485/TTL converter [ALI Kincony A2](https://www.aliexpress.com/item/1005005385355462.html)
+- RS485/TTL converter (better) [ALI](https://www.aliexpress.com/item/4001183401209.html) (without flow pin!)  
 
 ## Datasheet:
 - Manual: [N4ROE16](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/main/DATA/N4ROE16%20Manual.pdf)
