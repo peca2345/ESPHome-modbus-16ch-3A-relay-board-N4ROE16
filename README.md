@@ -55,5 +55,182 @@ It is a three-phase non-invasive wattmeter with a DIN rail measuring coil. It co
 0x05  C phase current         XXX.X A 
 0x06  Neutral current         XXX.X A
 
+```
+## ESPHome code:
+```
+esphome:
+  name: a4s-N4ROE16
+  friendly_name: a4s-N4ROE16
 
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+logger:
+
+api:
+  encryption:
+    key: "R86/CjUd0rIfghfxghfsgjsfjsfdgjsfgj415lu/y97FMHCt3F0="
+
+ota:
+  password: "4h56r454j56fgd4j5fg6j4fg56dj1fgdj"
+
+wifi: 
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+captive_portal:
+    
+######################### 
+    
+uart:
+  id: mod_bus
+  rx_pin: GPIO33
+  tx_pin: GPIO32
+  baud_rate: 9600
+  stop_bits: 1
+
+modbus:
+  send_wait_time: 200ms
+  id: rs485
+
+modbus_controller:
+  - id: relay_board
+    address: 1
+    modbus_id: rs485
+    setup_priority: -10
+    
+#########################
+
+switch:
+  - platform: modbus_controller
+    modbus_controller_id: relay_board
+    id: rs_relay1
+    name: "Relay 1"
+    restore_mode: RESTORE_DEFAULT_OFF
+    register_type: coil
+    address: 0
+    bitmask: 1
+  - platform: modbus_controller
+    modbus_controller_id: relay_board
+    id: rs_relay2
+    name: "Relay 2"
+    restore_mode: RESTORE_DEFAULT_OFF
+    register_type: coil
+    address: 1
+    bitmask: 1
+  - platform: modbus_controller
+    modbus_controller_id: relay_board
+    id: rs_relay3
+    name: "Relay 3"
+    restore_mode: RESTORE_DEFAULT_OFF
+    register_type: coil
+    address: 2
+    bitmask: 1
+  - platform: modbus_controller
+    modbus_controller_id: relay_board
+    id: rs_relay4
+    name: "Relay 4"
+    restore_mode: RESTORE_DEFAULT_OFF
+    register_type: coil
+    address: 3
+    bitmask: 1
+  - platform: modbus_controller
+    modbus_controller_id: relay_board
+    id: rs_relay5
+    name: "Relay 5"
+    restore_mode: RESTORE_DEFAULT_OFF
+    register_type: coil
+    address: 4
+    bitmask: 1
+  - platform: modbus_controller
+    modbus_controller_id: relay_board
+    id: rs_relay6
+    name: "Relay 6"
+    restore_mode: RESTORE_DEFAULT_OFF
+    register_type: coil
+    address: 5
+    bitmask: 1
+  - platform: modbus_controller
+    modbus_controller_id: relay_board
+    id: rs_relay7
+    name: "Relay 7"
+    restore_mode: RESTORE_DEFAULT_OFF
+    register_type: coil
+    address: 6
+    bitmask: 1
+  - platform: modbus_controller
+    modbus_controller_id: relay_board
+    id: rs_relay8
+    name: "Relay 8"
+    restore_mode: RESTORE_DEFAULT_OFF
+    register_type: coil
+    address: 7
+    bitmask: 1
+  - platform: modbus_controller
+    modbus_controller_id: relay_board
+    id: rs_relay9
+    name: "Relay 9"
+    restore_mode: RESTORE_DEFAULT_OFF
+    register_type: coil
+    address: 8
+    bitmask: 1
+  - platform: modbus_controller
+    modbus_controller_id: relay_board
+    id: rs_relay10
+    name: "Relay 10"
+    restore_mode: RESTORE_DEFAULT_OFF
+    register_type: coil
+    address: 9
+    bitmask: 1
+  - platform: modbus_controller
+    modbus_controller_id: relay_board
+    id: rs_relay11
+    name: "Relay 11"
+    restore_mode: RESTORE_DEFAULT_OFF
+    register_type: coil
+    address: 10
+    bitmask: 1
+  - platform: modbus_controller
+    modbus_controller_id: relay_board
+    id: rs_relay12
+    name: "Relay 12"
+    restore_mode: RESTORE_DEFAULT_OFF
+    register_type: coil
+    address: 11
+    bitmask: 1
+  - platform: modbus_controller
+    modbus_controller_id: relay_board
+    id: rs_relay13
+    name: "Relay 13"
+    restore_mode: RESTORE_DEFAULT_OFF
+    register_type: coil
+    address: 12
+    bitmask: 1
+  - platform: modbus_controller
+    modbus_controller_id: relay_board
+    id: rs_relay14
+    name: "Relay 14"
+    restore_mode: RESTORE_DEFAULT_OFF
+    register_type: coil
+    address: 13
+    bitmask: 1
+  - platform: modbus_controller
+    modbus_controller_id: relay_board
+    id: rs_relay15
+    name: "Relay 15"
+    restore_mode: RESTORE_DEFAULT_OFF
+    register_type: coil
+    address: 14
+    bitmask: 1
+  - platform: modbus_controller
+    modbus_controller_id: relay_board
+    id: rs_relay16
+    name: "Relay 16"
+    restore_mode: RESTORE_DEFAULT_OFF
+    register_type: coil
+    address: 15
+    bitmask: 1
+```
 
