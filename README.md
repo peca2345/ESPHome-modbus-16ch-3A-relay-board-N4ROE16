@@ -6,11 +6,14 @@ This guide describes how to communicate with ESP MCU using ESPHome for integrati
 ## Info:
 - 16ch relay board
 - RS485 Modbus RTU
-- 12V or 24V version
+- working voltage 12V or 24V version
 - max. current 3A/250VAC 3A/30VDC
+- relay consumption 18mA
 - DIN rail
 - price 28$
 - the device does not have a DIP switch for changing the address (only software change of address through PC or ESPHome)
+- relay with NO/COM/NC
+- baudrate 9600 / stop bits 1
   
 ## Components:
 - 16CH RS485 Relay Board N4ROE16: [ALI](https://www.aliexpress.us/item/3256805729272932.html) / [ELETECH](https://485io.com/rs485-relays-c-2_3_19/n4roe16-mini-dc-24v-16ch-multifunction-modbus-rtu-rs485-relay-board-2a-02w-low-power-consumption-micro-voice-relay-module-n4rof32-p-1015.html) 
