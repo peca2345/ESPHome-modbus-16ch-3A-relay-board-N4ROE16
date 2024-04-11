@@ -6,7 +6,7 @@
 ## Components:
 - 16CH RS485 Relay Board N4ROE16: [ALI](https://www.aliexpress.us/item/3256805729272932.html?spm=a2g0o.order_list.order_list_main.39.2b4f1802Mfl4l0&gatewayAdapt=glo2usa4itemAdapt#nav-specification) / [ELETECH](https://485io.com/rs485-relays-c-2_3_19/n4roe16-mini-dc-24v-16ch-multifunction-modbus-rtu-rs485-relay-board-2a-02w-low-power-consumption-micro-voice-relay-module-n4rof32-p-1015.html) 
 - Kincony A4S / A8S / E16S or any ESP with RS485/TTL converter. [ALI Kincony A2](https://de.aliexpress.com/item/1005005385355462.html?spm=a2g0o.productlist.main.9.2a7979888Tsesu&algo_pvid=022308dc-819a-4ed5-9940-b5636d6bf2c5&algo_exp_id=022308dc-819a-4ed5-9940-b5636d6bf2c5-4&pdp_npi=4%40dis%21USD%2153.62%2153.62%21%21%2153.62%2153.62%21%402101dee017128618204757036e06d6%2112000032837637725%21sea%21CZ%21166466096%21&curPageLogUid=s5qWmPFoNffs&utparam-url=scene%3Asearch%7Cquery_from%3A)
-- RS485/TTL converter (better): [SHOP](https://www.aliexpress.com/item/4001183401209.html?fbclid=IwAR26adPvbd5XSLpuhDKlmJ9YXi_KyOS-wdXoYRxBGDR4IJyzURRGOYdQwMk) (without flow pin)  
+- RS485/TTL converter (better): [ALI](https://www.aliexpress.com/item/4001183401209.html?fbclid=IwAR26adPvbd5XSLpuhDKlmJ9YXi_KyOS-wdXoYRxBGDR4IJyzURRGOYdQwMk) (without flow pin)  
 
 ## Datasheet:
 - Manual: [N4ROE16](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/main/DATA/N4ROE16%20Manual.pdf)
