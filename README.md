@@ -1,61 +1,28 @@
 # ESPHome - 16CH 3A Realy Board RS485 Modbus RTU
 
-## Description:
-It is a three-phase non-invasive wattmeter with a DIN rail measuring coil. It communicates via modbus protocol via ESP8266/ESP32 to LAN. The program is written using ESPHome and is fully integrated into Home Assistant. It is a cheap alternative to, for example Shelly 3EM.
-
-![DSM630MCT](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/DSM630MCT_rs485.png?raw=true)
-
-![Lovelace](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/lovelace2.png?raw=true)
-
 ## Info:
-- modbus datasheet: [DSM630MCT](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/DSM630MCT_3_phase_wattmeter_datasheet.pdf)
-- I do not recommend buying an unnecessary large clamp - 100A is really huge!
-- on the wattmeter you have to set the transformer type to make an accurate measurement
-- use only shielded cable, otherwise the error "Modbus CRC Check Failed!" may appear in the log.
-- put a 120 ohm resistor after the last connected device
-- you have to find out what the wattmeter address is - default is 0x01
-- you also need to find out the serial port speed - default 9600
-- in ESPHome use the sensor class only for addresses that are read-only
-- for addresses that are read use the "sensor" class
-- for addresses that are write use the "number" class (you can then change their values in lovelace)
-- for each register you want to have in HA you have to create a separate sensor in ESPHome
-- as long as the address of the device is the same as some sensor, it doesn't matter
-- wattmeter works with default address 0x01
+- datasheet: [N4ROE16](https://485io.com/rs485-relays-c-2_3_19/n4roe16-mini-dc-24v-16ch-multifunction-modbus-rtu-rs485-relay-board-2a-02w-low-power-consumption-micro-voice-relay-module-n4rof32-p-1015.html)
+- 16ch 3A relay board RS485 Modbus RTU
 
 ## Components:
-- ESP8266 / ESP32
-- RS485/TTL converter: [SHOP](https://www.laskakit.cz/prevodnik-ttl-na-rs-485--max485/) (not very good quality, interference occurs)  
+- 16CH RS485 Relay Board N4ROE16: [ALI](https://www.aliexpress.us/item/3256805729272932.html?spm=a2g0o.order_list.order_list_main.39.2b4f1802Mfl4l0&gatewayAdapt=glo2usa4itemAdapt#nav-specification) / [ELETECH](https://485io.com/rs485-relays-c-2_3_19/n4roe16-mini-dc-24v-16ch-multifunction-modbus-rtu-rs485-relay-board-2a-02w-low-power-consumption-micro-voice-relay-module-n4rof32-p-1015.html) 
+- Kincony A4S / A8S / E16S or any ESP with RS485/TTL converter. [ALI A8M](https://en.aliexpress.com/item/1005005470381672.html?spm=a2g0o.productlist.main.115.70caSMYaSMYaNo&algo_pvid=c2d034cb-c67d-4dfa-a5cd-f89b16780ca9&algo_exp_id=c2d034cb-c67d-4dfa-a5cd-f89b16780ca9-57&pdp_npi=4%40dis%21USD%2193.17%2193.17%21%21%2193.17%2193.17%21%4021032e4e17128611286534242edf8a%2112000033211899237%21sea%21CZ%21166466096%21&curPageLogUid=I78J5pt4KP2n&utparam-url=scene%3Asearch%7Cquery_from%3A)
 - RS485/TTL converter (better): [SHOP](https://www.aliexpress.com/item/4001183401209.html?fbclid=IwAR26adPvbd5XSLpuhDKlmJ9YXi_KyOS-wdXoYRxBGDR4IJyzURRGOYdQwMk) (without flow pin)  
-- Wattmeter DSM630MCT: [SHOP](https://www.aliexpress.com/item/1005004059758839.html?dp=60884bf2d2ed5efc7c969b20&cn=ah&aff_fcid=f70ab32472014c52a8e7cedd4dd3921e-1682023557871-06550-_sSETun&aff_fsk=_sSETun&aff_platform=link-c-tool&sk=_sSETun&aff_trace_key=f70ab32472014c52a8e7cedd4dd3921e-1682023557871-06550-_sSETun&terminal_id=153e61cce3cb4f32a9ecb3735d8d5ed6&afSmartRedirect=y) 
 
-## Schematic ESP32:
-![Schema](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/schematic2.png?raw=true)
-
-## Schematic ESP8266 - Wemos D1 mini:
-![Schema](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/schematic_wemos.png?raw=true)
-
+## Datasheet:
+- Manual: [N4ROE16](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/main/DATA/N4ROE16%20Manual.pdf)
+- Modbus: [N4ROE16](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/main/DATA/N4ROE16%20MODBUS%20RTU%20Commamd.pdf)
+- Software: [N4ROE16](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/main/DATA/N4ROA01_N4ROB02_N4ROC04_N4ROD08_N4ROE16_N4ROF32%20Manual.rar)
+  
 ## Wiring:
-![Wiring](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/schema.jpg?raw=true)
+![Wiring](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/a0e2a1e382621f528fbd987088412eff6d14c310/DATA/test.png)
 
-## Transformer size setting:
-![settings](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/settings.png?raw=true)
+## Home Assistant Dashboard:
+![DSM630MCT](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/a0e2a1e382621f528fbd987088412eff6d14c310/DATA/HA.png)
 
+## Modbus RTU Function Codes:
+![function codes](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/main/DATA/rs485_function_code.png?raw=true)
 
-## Modbus address:
-```
-0x01  Wattmeter default address
-```
-
-```
-0x00  A-phase voltage         XXX.X V 
-0x01  B-phase voltage         XXX.X_V 
-0x02  C-phase voltage         XXX.X V 
-0x03  A phase current         XXX.X A 
-0x04  B phase current         XXX.X A 
-0x05  C phase current         XXX.X A 
-0x06  Neutral current         XXX.X A
-
-```
 ## ESPHome code:
 ```
 esphome:
