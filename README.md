@@ -73,7 +73,7 @@ switch:
   - platform: modbus_controller
     modbus_controller_id: relay_board
     id: rs_relay1
-    name: "Relay 1"
+    name: "rs485_relay1"
     restore_mode: RESTORE_DEFAULT_OFF
     register_type: coil
     address: 0
@@ -81,7 +81,7 @@ switch:
   - platform: modbus_controller
     modbus_controller_id: relay_board
     id: rs_relay2
-    name: "Relay 2"
+    name: "rs485_relay2"
     restore_mode: RESTORE_DEFAULT_OFF
     register_type: coil
     address: 1
@@ -89,7 +89,7 @@ switch:
   - platform: modbus_controller
     modbus_controller_id: relay_board
     id: rs_relay3
-    name: "Relay 3"
+    name: "rs485_relay3"
     restore_mode: RESTORE_DEFAULT_OFF
     register_type: coil
     address: 2
@@ -97,7 +97,7 @@ switch:
   - platform: modbus_controller
     modbus_controller_id: relay_board
     id: rs_relay4
-    name: "Relay 4"
+    name: "rs485_relay4"
     restore_mode: RESTORE_DEFAULT_OFF
     register_type: coil
     address: 3
@@ -105,7 +105,7 @@ switch:
   - platform: modbus_controller
     modbus_controller_id: relay_board
     id: rs_relay5
-    name: "Relay 5"
+    name: "rs485_relay5"
     restore_mode: RESTORE_DEFAULT_OFF
     register_type: coil
     address: 4
@@ -113,7 +113,7 @@ switch:
   - platform: modbus_controller
     modbus_controller_id: relay_board
     id: rs_relay6
-    name: "Relay 6"
+    name: "rs485_relay6"
     restore_mode: RESTORE_DEFAULT_OFF
     register_type: coil
     address: 5
@@ -121,7 +121,7 @@ switch:
   - platform: modbus_controller
     modbus_controller_id: relay_board
     id: rs_relay7
-    name: "Relay 7"
+    name: "rs485_relay7"
     restore_mode: RESTORE_DEFAULT_OFF
     register_type: coil
     address: 6
@@ -129,7 +129,7 @@ switch:
   - platform: modbus_controller
     modbus_controller_id: relay_board
     id: rs_relay8
-    name: "Relay 8"
+    name: "rs485_relay8"
     restore_mode: RESTORE_DEFAULT_OFF
     register_type: coil
     address: 7
@@ -137,7 +137,7 @@ switch:
   - platform: modbus_controller
     modbus_controller_id: relay_board
     id: rs_relay9
-    name: "Relay 9"
+    name: "rs485_relay9"
     restore_mode: RESTORE_DEFAULT_OFF
     register_type: coil
     address: 8
@@ -145,7 +145,7 @@ switch:
   - platform: modbus_controller
     modbus_controller_id: relay_board
     id: rs_relay10
-    name: "Relay 10"
+    name: "rs485_relay10"
     restore_mode: RESTORE_DEFAULT_OFF
     register_type: coil
     address: 9
@@ -153,7 +153,7 @@ switch:
   - platform: modbus_controller
     modbus_controller_id: relay_board
     id: rs_relay11
-    name: "Relay 11"
+    name: "rs485_relay11"
     restore_mode: RESTORE_DEFAULT_OFF
     register_type: coil
     address: 10
@@ -161,7 +161,7 @@ switch:
   - platform: modbus_controller
     modbus_controller_id: relay_board
     id: rs_relay12
-    name: "Relay 12"
+    name: "rs485_relay12"
     restore_mode: RESTORE_DEFAULT_OFF
     register_type: coil
     address: 11
@@ -169,7 +169,7 @@ switch:
   - platform: modbus_controller
     modbus_controller_id: relay_board
     id: rs_relay13
-    name: "Relay 13"
+    name: "rs485_relay13"
     restore_mode: RESTORE_DEFAULT_OFF
     register_type: coil
     address: 12
@@ -177,7 +177,7 @@ switch:
   - platform: modbus_controller
     modbus_controller_id: relay_board
     id: rs_relay14
-    name: "Relay 14"
+    name: "rs485_relay14"
     restore_mode: RESTORE_DEFAULT_OFF
     register_type: coil
     address: 13
@@ -185,7 +185,7 @@ switch:
   - platform: modbus_controller
     modbus_controller_id: relay_board
     id: rs_relay15
-    name: "Relay 15"
+    name: "rs485_relay15"
     restore_mode: RESTORE_DEFAULT_OFF
     register_type: coil
     address: 14
@@ -193,7 +193,7 @@ switch:
   - platform: modbus_controller
     modbus_controller_id: relay_board
     id: rs_relay16
-    name: "Relay 16"
+    name: "rs485_relay16"
     restore_mode: RESTORE_DEFAULT_OFF
     register_type: coil
     address: 15
