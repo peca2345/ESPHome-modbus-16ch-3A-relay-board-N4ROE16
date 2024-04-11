@@ -32,6 +32,10 @@
 ![DSM630MCT](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/main/DATA/HA_dashboard.png?raw=true)
 
 ## Wiring:
+- Connect the RS485-A of the relay board to the RS485-A of the Kincony and also connect the RS485-B to RS485-B.
+- When using longer RS485 cables, you should use a terminating resistor between A and B.
+- You can connect a large number of RS485 boards to one bus, but each device must have a unique address!
+  
 ![Wiring](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/main/DATA/connection.png?raw=true)
 
 ## Modbus RTU Function Codes:
