@@ -30,13 +30,13 @@ This solution allows controlling a 16-channel relay board using Home Assistant a
 - Software: [N4ROE16](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/main/DATA/N4ROA01_N4ROB02_N4ROC04_N4ROD08_N4ROE16_N4ROF32%20Manual.rar)
   
 ## Home Assistant Dashboard:
-![DSM630MCT](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/a0e2a1e382621f528fbd987088412eff6d14c310/DATA/HA.png)
+![DSM630MCT](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/main/DATA/HA_dashboard.png?raw=true)
 
 ## Wiring:
 ![Wiring](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/a0e2a1e382621f528fbd987088412eff6d14c310/DATA/test.png)
 
 ## Modbus RTU Function Codes:
-![function codes](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/main/DATA/rs485_function_code.png?raw=true)
+![function codes](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/main/DATA/rs485_code.png?raw=true)
 
 ## ESPHome code:
 ```
