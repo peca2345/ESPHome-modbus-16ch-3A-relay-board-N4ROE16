@@ -33,7 +33,7 @@ This solution allows controlling a 16-channel relay board using Home Assistant a
 ![DSM630MCT](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/main/DATA/HA_dashboard.png?raw=true)
 
 ## Wiring:
-![Wiring](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/a0e2a1e382621f528fbd987088412eff6d14c310/DATA/test.png)
+![Wiring](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/main/DATA/connection.png?raw=true)
 
 ## Modbus RTU Function Codes:
 ![function codes](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/main/DATA/rs485_code.png?raw=true)
