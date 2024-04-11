@@ -3,6 +3,8 @@
 ## Description:
 This guide describes how to communicate with ESP MCU using ESPHome for integration into Home Assistant. This solution allows controlling a 16-channel relay board using Home Assistant and the Modbus RTU protocol.
 
+![Board](https://github.com/peca2345/ESPHome-modbus-16ch-3A-relay-board-N4ROE16/blob/main/DATA/board.png?raw=true)
+
 ## Info:
 - 16ch relay board
 - RS485 Modbus RTU
